@@ -25,4 +25,5 @@
           controller_username: "ansible_eda"
           controller_password: "123456"
           job_args:
-            vlan_name: "{{ event.payload.vlan_name }}"
+            extra_vars:
+              vlan_name: "{{ event.payload.vlan_name }}"
