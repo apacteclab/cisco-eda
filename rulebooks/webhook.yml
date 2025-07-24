@@ -21,7 +21,6 @@
         run_job_template:
           name: "Run Remediation Create Vlan"
           organization: "Default"
-          inventory: "Cisco Switch Inventory"
           controller_url: "https://tower.example.com/api/v2/job_templates/27"
           controller_username: "ansible_eda"
           controller_password: "123456"
