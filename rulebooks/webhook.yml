@@ -24,5 +24,5 @@
           controller_url: "https://aap24.imlab.com/api/v2/job_templates/27"
           controller_username: "ansible_eda"
           controller_password: "123456"
-          extra_vars:
+          job_args:
             vlan_name: "{{ event.payload.vlan_name }}"
