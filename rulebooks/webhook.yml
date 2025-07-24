@@ -21,7 +21,7 @@
         run_job_template:
           name: "Run Remediation Create Vlan"
           organization: "Default"
-          inventory: "Production"
+          inventory: "Cisco Switch Inventory"
           controller_url: "{{ lookup('env', 'CONTROLLER_URL') }}"
           controller_username: "{{ lookup('env', 'CONTROLLER_USERNAME') }}"
           controller_password: "{{ lookup('env', 'CONTROLLER_PASSWORD') }}"
