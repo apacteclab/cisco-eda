@@ -18,6 +18,12 @@
   ## Define the action we should take should the condition be met
 
       action:
-        run_playbook:
-          name: say-what.yml
-          inventory: inventory.yml
+        run_job_template:
+          name: "Run Remediation Create Vlan"
+          organization: "Default"
+          inventory: "Production"
+          controller_url: "{{ lookup('env', 'CONTROLLER_URL') }}"
+          controller_username: "{{ lookup('env', 'CONTROLLER_USERNAME') }}"
+          controller_password: "{{ lookup('env', 'CONTROLLER_PASSWORD') }}"
+          extra_vars:
+            vlan_name: "{{ event.payload.vlan_name }}"
